@@ -1,0 +1,45 @@
+.main-image{
+    height: 250px;
+    width: 1000px;
+    border-radius: 5%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 50% ;
+    margin: 0 25%;
+}
+
+.category-image {
+    height: 150px;
+    width: 250px;
+    border-radius: 25%;
+}
+
+ .category {
+     margin-top: 50px;
+     cursor: pointer;
+     background-color: olivedrab;
+     padding: 15px;
+     border-radius: 25%;
+ }
+ .category:hover {
+     transform: scale(1.1);
+     transition: .6s;
+     box-shadow: 10px 10px 20px 0 springgreen;
+ }
+
+ .categories{
+     display: flex;
+     justify-content: space-between;
+
+ }
+
+ .category-text {
+     font-size: 12px;
+ }
+
+ .main-text { text-align: center;
+}
+
+.rectangle { height: 5px; width: 200px; background-color: rgb(95, 13, 13);
+    margin: auto
+}
