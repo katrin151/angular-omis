@@ -1,0 +1,83 @@
+import { CatViewComponent } from './cat-view/cat-view.component';
+import { CatComponent } from './cat/cat.component';
+
+
+  const routes: Routes = [
+    { path: '', component: CatComponent },
+    { path: 'cat/view', component: CatViewComponent },
+  ];
+
+
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+app routing modules.ts
+
+<br><br><br><br><br>
+<p>numbers works!</p>
+
+<div *ngFor="let number of numbers"> 
+    {{number}} 
+
+</div>
+numbers.component.html
+
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+}
+app.component.ts
+
+
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NumbersComponent } from './numbers/numbers.component';
+import { CatViewComponent } from './cat-view/cat-view.component';
+import { CatComponent } from './cat/cat.component';
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    NumbersComponent,
+    CatViewComponent,
+    CatComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+app.modules.ts
+
+
+<!-- routerLink= "cat/view" -->
+  <div class="cat-element">
+    
+  <div *ngFor=" let cat of cats " [routerLink]="['cat','view']">  
+    {{ cat.breed }} <br>
+    {{ cat.firstname }} <br>
+     <img src="{{ cat.picture }}" > <br>
+  
+   
+  </div>
+
+
