@@ -1,6 +1,6 @@
 .main-image{
-    height: 250px;
-    width: 1000px;
+    height: 25px;
+    width: 100px;
     border-radius: 5%;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -9,8 +9,8 @@
 }
 
 .category-image {
-    height: 150px;
-    width: 250px;
+    height: 15px;
+    width: 25px;
     border-radius: 25%;
 }
 
@@ -40,6 +40,6 @@
  .main-text { text-align: center;
 }
 
-.rectangle { height: 5px; width: 200px; background-color: rgb(95, 13, 13);
+.rectangle { height: 5px; width: 20px; background-color: rgb(95, 13, 13);
     margin: auto
 }
