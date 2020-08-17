@@ -22,4 +22,9 @@ export class NumbersComponent implements OnInit {
     this.numbers.push(Math.floor(Math.random() * 99) + 1  );
   
   }
+
+  onDelete(i: number) {
+    //console.log("nupp töötab");
+    this.numbers.splice(i, 1);
+  }
 }

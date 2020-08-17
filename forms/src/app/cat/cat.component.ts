@@ -24,7 +24,7 @@ export class CatComponent implements OnInit {
   constructor( private catService: CatService) { }
 
   ngOnInit(): void {
-    this.cats = this.catService.cats;
+    this.cats = this.catService.getCats();
   }
 
 
@@ -34,7 +34,9 @@ export class CatComponent implements OnInit {
     let cat = contactForm.value;
     console.log(cat);
     console.log(this.cats);
-    this.cats.push(cat);
+    // this.cats.push(cat);
+    this.catService.addCat(cat);
+    this.cats = this.catService.getCats();
     console.log(this.cats);
   }
 
