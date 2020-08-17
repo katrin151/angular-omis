@@ -1,0 +1,15 @@
+.header {
+    background-color: rgb(82, 135, 168);
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-link{
+    margin: 20px;
+    cursor: pointer;
+}
+.header img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
