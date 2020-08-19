@@ -1,0 +1,39 @@
+.items {
+   display: flex;
+   /*justify-content: space-between;*/
+   max-width: 800px;
+   flex-wrap: wrap;
+   
+   margin:0 auto;
+   margin-bottom: 100px;
+}
+
+.item {
+    
+    background-color: white;
+    color:red;
+    width: 180px;
+    margin: 10px 20px;
+    border-radius: 10px;
+}
+
+.item:hover {
+    transition: 0.5s;
+    box-shadow: 0 8px 16px 0 rgba(0 ,0, 0, .35);
+    cursor:pointer;
+}
+
+.item img {
+     height:  150px;
+     width: 150px;
+     padding: 15px;
+     border-radius: 10%;
+}
+.item:hover img {
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.item p { 
+    padding: 0 15px;
+}

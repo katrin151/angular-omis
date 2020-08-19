@@ -1,0 +1,20 @@
+.item {
+    
+    background-color: white;
+    color:red;
+    width: 182px;
+    margin: 30px auto;
+    margin-bottom: 100px;
+    border-radius: 10px;
+}
+
+.item img {
+    height:  150px;
+    width: 150px;
+    padding: 15px;
+    border-radius: 10%;
+}
+
+.item p { 
+    padding: 0 15px;
+}

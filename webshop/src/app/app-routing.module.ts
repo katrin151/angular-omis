@@ -12,7 +12,7 @@ const routes: Routes = [
   
   { path: '', component: ItemListComponent},
   { path: 'item/new', component: ItemNewComponent},
-  { path: 'item/:id', component: ItemViewComponent},
+  { path: 'item/:itemId', component: ItemViewComponent},
   { path: 'login', component: LoginComponent},
   { path: 'signup', component: SignupComponent},
   { path: 'registrate', redirectTo: "signup"},
