@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  /*today = new Date();
+  todaysDataTime = '';
+  constructor() {
+    this.todaysDataTime = formatDate(this.today, 'dd-MM-yyyy hh:mm:ss a', 'en-US', '+0530');
+   }*/
 
   ngOnInit(): void {
   }
+
+  today2: number = Date.now();
+
+constructor() {
+    setInterval(() => {this.today2 = Date.now()}, 1);
+}
 
 }
