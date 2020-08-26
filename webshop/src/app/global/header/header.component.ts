@@ -10,7 +10,8 @@ export class HeaderComponent implements OnInit {
   /*today = new Date();
   todaysDataTime = '';
   constructor() {
-    this.todaysDataTime = formatDate(this.today, 'dd-MM-yyyy hh:mm:ss a', 'en-US', '+0530');
+    this.todaysDataTime = formatDate(this.today, 
+      'dd-MM-yyyy hh:mm:ss a', 'en-US', '+0530');
    }*/
 
   ngOnInit(): void {
@@ -19,7 +20,7 @@ export class HeaderComponent implements OnInit {
   today2: number = Date.now();
 
 constructor() {
-    setInterval(() => {this.today2 = Date.now()}, 1);
+    setInterval(() => {this.today2 = Date.now()}, 1000);
 }
 
 }
