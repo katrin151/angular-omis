@@ -30,5 +30,31 @@ export class CatViewComponent implements OnInit {
     this.cat = this.cats[this.i];
     console.log(this.cat);
   }
+/*
+get birthday() { return new Date(1988,3,15)};
+birthday2 = new Date(1988,3,5);*/
+
+  birthday = new Date(1988, 3, 15); // April 15, 1988 -- since month parameter is zero-based
+  toggle = true; // start with true == shortDate
+
+  get format()   { return this.toggle ? 'shortDate' : 'fullDate'; }
+  toggleFormat() {
+    let tulemus = "";
+    if (this.birthday.getFullYear()>1950) {
+      tulemus= "tõene";
+    }  else {
+      tulemus ="väär";
+    }
+    console.log(tulemus+ "pikk");
+    
+    let prinditav = this.birthday.getFullYear() >1950 ? "tõene" : "väär";
+    console.log(prinditav + "lühike")
+  
+    this.toggle = !this.toggle;
+    
+     
+  }
+
+  
 
 }

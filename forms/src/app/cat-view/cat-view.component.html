@@ -1,9 +1,13 @@
 
 
 <div class="cat-element">
-<b>vaatad kassi:</b> <br> <br>
-{{ cat.firstname }} <br>
+<b>vaatad kassi:</b> <br> 
+
+Nimi: {{ cat.firstname | uppercase | shorten:6 }} <br>
 {{ cat.breed }} <br>
 <img src="{{cat.picture}}" >
 
 </div>
+
+<p>Kangelase sünnipäev on: {{ birthday | date:format }}</p>
+<button (click)="toggleFormat()">Muuda Formaati</button>
