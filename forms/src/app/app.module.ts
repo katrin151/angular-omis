@@ -10,6 +10,8 @@ import { CatComponent } from './cat/cat.component';
 import { MainComponent } from './main/main.component';
 import { ShortenPipe } from './cat-view/shorten.pipe';
 import { MultiplicationPipe } from './numbers/multiplication.pipe';
+import { ReversePipe } from './reverse.pipe';
+import { CapitaliseFirstPipe } from './capitalise-first.pipe';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { MultiplicationPipe } from './numbers/multiplication.pipe';
     CatComponent,
     MainComponent,
     ShortenPipe,
-    MultiplicationPipe
+    MultiplicationPipe,
+    ReversePipe,
+    CapitaliseFirstPipe
   ],
   imports: [
     BrowserModule,
