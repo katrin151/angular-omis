@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../item.service';
 import { ActivatedRoute } from '@angular/router';
+import { CartService } from '../../cart/cart.service'
 
 @Component({
   selector: 'app-item-view',
@@ -11,7 +12,7 @@ export class ItemViewComponent implements OnInit {
   item: {imgSrc: string, title: string, price: string, category: string};
 
   constructor(private itemService: ItemService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute, private cartService: CartService) { }
 
   ngOnInit(): void {
     
@@ -31,6 +32,7 @@ export class ItemViewComponent implements OnInit {
   }
    onAddtoCart() {
      console.log("abc");
+     this.cartService.addItem(this.item);
    }
 
 }
