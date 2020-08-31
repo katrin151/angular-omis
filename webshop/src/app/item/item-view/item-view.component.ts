@@ -29,5 +29,8 @@ export class ItemViewComponent implements OnInit {
    // this.item = this.itemService.items[0];
     
   }
+   onAddtoCart() {
+     console.log("abc");
+   }
 
 }
