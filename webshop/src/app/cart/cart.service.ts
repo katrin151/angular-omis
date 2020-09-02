@@ -19,4 +19,9 @@ export class CartService {
   addItem(item) {
     this.itemsInCart.push(item);
   }
+
+
+  removeItem(i) {
+    this.itemsInCart.splice(i, 1);
+  }
 }

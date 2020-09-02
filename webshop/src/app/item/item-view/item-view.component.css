@@ -18,3 +18,11 @@
 .item p { 
     padding: 0 15px;
 }
+
+.add-to-cart {
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    opacity: 0.7;
+}

@@ -4,5 +4,11 @@
        <p> {{item.title}}</p>
        <p>{{item.price}}</p>
 
-       <button (click)="onAddtoCart()">Lisa ostukorvi</button>
+       <button class="add-to-cart" (click)="onAddtoCart()">Lisa ostukorvi</button>
 </div>
+
+<lib-toastify-toast-container 
+[position]="'bottom-right' " 
+[iconLibrary]="'material' " 
+></lib-toastify-toast-container>
+
