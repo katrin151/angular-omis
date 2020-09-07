@@ -12,6 +12,7 @@ import { ShortenPipe } from './cat-view/shorten.pipe';
 import { MultiplicationPipe } from './numbers/multiplication.pipe';
 import { ReversePipe } from './reverse.pipe';
 import { CapitaliseFirstPipe } from './capitalise-first.pipe';
+import { CatSelectComponent } from './cat-select/cat-select.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { CapitaliseFirstPipe } from './capitalise-first.pipe';
     ShortenPipe,
     MultiplicationPipe,
     ReversePipe,
-    CapitaliseFirstPipe
+    CapitaliseFirstPipe,
+    CatSelectComponent
   ],
   imports: [
     BrowserModule,

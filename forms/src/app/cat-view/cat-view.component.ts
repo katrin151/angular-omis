@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CatService } from '../cat.service';
+import { Cat } from '../cat.model';
 
 
 @Component({
@@ -10,10 +11,11 @@ import { CatService } from '../cat.service';
 })
 export class CatViewComponent implements OnInit {
 
-  cats =[];
+  cats : Cat [] = [];
 
-  cat: {breed: string, firstname:string , picture: string} = 
-  { breed: "", firstname: "",  picture : ""};
+  //cat: Cat =   { breed: "", firstname: "",  picture : ""};
+  
+  cat: Cat = new Cat("","",""); 
   i: number;
 
   constructor(private route: ActivatedRoute, private catService: CatService) { }
@@ -21,6 +23,9 @@ export class CatViewComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.catService.getCats());
     this.cats = this.catService.getCats();
+    //params: {id:"0"}
+    // id   app-routingu seess :id
+    // "0"  väärtus mistuleb url-i
     this.route.params.subscribe( params =>
       this.i = params['id']
 
@@ -38,7 +43,7 @@ birthday2 = new Date(1988,3,5);*/
   toggle = true; // start with true == shortDate
 
   get format()   { return this.toggle ? 'shortDate' : 'fullDate'; }
-  toggleFormat() {
+  toggleFormat(): void {
     let tulemus = "";
     if (this.birthday.getFullYear()>1950) {
       tulemus= "tõene";

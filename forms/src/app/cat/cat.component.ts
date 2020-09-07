@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CatService } from '../cat.service';
+import { Cat } from '../cat.model';
+import { NgForm } from '@angular/forms';
+import { CatSelectService} from '../cat-select/cat-select.service';
 
 @Component({
   selector: 'app-cat',
@@ -8,36 +11,38 @@ import { CatService } from '../cat.service';
 })
 export class CatComponent implements OnInit {
 
-
-
-  
-  title = 'forms';
-  
+  // title = 'forms';
  //cat = {breed:"siiamikass", firstname: "garfield", picture: "www.catpicture.ee"} ;
-  
-  cat = {};
+  // cat = {};
 
-  cats= [];
+  cats: Cat [] = [];
 
-  
-
-  constructor( private catService: CatService) { }
+  constructor( private catService: CatService ,
+    private catSelectService: CatSelectService ) { }
 
   ngOnInit(): void {
     this.cats = this.catService.getCats();
   }
 
 
-  onSubmit(contactForm){
+  onSubmit(catForm: NgForm): void {
     // väärtused
-    console.log(contactForm.value);
-    let cat = contactForm.value;
+    console.log(catForm.value);
+    //let cat = catForm.value;
+    let cat = new Cat(
+      catForm.value.breed, 
+      catForm.value.firstname, 
+      catForm.value.picture
+      ) ;
     console.log(cat);
     console.log(this.cats);
     // this.cats.push(cat);
     this.catService.addCat(cat);
     this.cats = this.catService.getCats();
     console.log(this.cats);
+  }
+  onChooseCat(cat: Cat) {
+    this.catSelectService.addCat(cat);
   }
 
 }

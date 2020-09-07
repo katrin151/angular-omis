@@ -1,4 +1,5 @@
-<p>cat works!</p>
+<!-- <app-cat-select></app-cat-select> -->
+<a routerLink="/selected-cats">mine vaata valitud kasse</a>
 
 <form class="cat-element" #catForm="ngForm" (ngSubmit)="onSubmit(catForm)">
   
@@ -25,15 +26,19 @@
    <!-- routerLink= "cat/view" -->
   <div class="cat-element">
     
-  <div *ngFor=" let cat of cats; let i = index" [routerLink]="['/cat',i]"> 
+  <div *ngFor=" let cat of cats; let i = index" > 
     
     
     <!-- [routerLink]="['cat',i]"
       [routerLink]="['cat',i]"
      -->
-    {{ cat.breed }} <br>
-    {{ cat.firstname }} <br>
-     <img src="{{ cat.picture }}" > <br><br><br>
+     <div [routerLink]="['/cat',i]">
+      {{ cat.breed }} <br>
+      {{ cat.firstname }} <br>
+      <img src="{{ cat.picture }}" > <br><br><br>
+    </div>   
+    <button (click)="onChooseCat(cat)">Vali kass</button>
+    <br><br>
   
    
   </div>
