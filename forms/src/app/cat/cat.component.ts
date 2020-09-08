@@ -44,5 +44,5 @@ export class CatComponent implements OnInit {
   onChooseCat(cat: Cat) {
     this.catSelectService.addCat(cat);
   }
-
+  
 }

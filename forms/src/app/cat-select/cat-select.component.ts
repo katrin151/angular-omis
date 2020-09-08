@@ -15,5 +15,15 @@ export class CatSelectComponent implements OnInit {
   ngOnInit(): void {
     this.selectedCats = this.catSelectService.getCats();
   }
+ 
+  onDelete() {
+    this.catSelectService.removeAllCats();
+    this.selectedCats=this.catSelectService.getCats();
+
+  }
+ onDeleteOne(i){
+    this.catSelectService.removeOne(i);
+    this.selectedCats=this.catSelectService.getCats();
+ }
 
 }
