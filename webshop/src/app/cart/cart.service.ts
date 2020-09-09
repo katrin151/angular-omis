@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Item } from '../item/item.model';
 
 @Injectable({
   providedIn: 'root'
@@ -8,20 +9,20 @@ export class CartService {
 
   constructor() { }
 
-  getItemsInCart() {
+  getItemsInCart(): Item[] {
     return this.itemsInCart.slice();
   }
 
-  removeAll() {
+  removeAll(): void {
     this.itemsInCart = [];
   }
 
-  addItem(item) {
+  addItem(item: Item) :void {
     this.itemsInCart.push(item);
   }
 
 
-  removeItem(i) {
+  removeItem(i:number): void {
     this.itemsInCart.splice(i, 1);
   }
 }

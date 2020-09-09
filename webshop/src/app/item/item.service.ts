@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Item } from './item.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +13,11 @@ export class ItemService {
 
   constructor() { }
 
-getItems() {
+getItems(): Item[] {
    return this.items.slice();
-
-}
-
+   }
+  
+   addItem(item: Item): void {
+      this.items.push(item);
+   }
 }

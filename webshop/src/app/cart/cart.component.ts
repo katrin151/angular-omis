@@ -28,7 +28,7 @@ export class CartComponent implements OnInit {
     
   }
 
-   onDelete() {
+   onDelete(): void {
     console.log(this.cartItems.toString()+ "sisu kui ma vajutan kustutamis nupule")
     
      this.cartService.removeAll();
@@ -39,7 +39,7 @@ export class CartComponent implements OnInit {
     
    } 
 
-   onDeleteOne(i) {
+   onDeleteOne(i:number): void {
      this.cartService.removeItem(i);
      this.cartItems = this.cartService.getItemsInCart();
      this.cartSum = 0;
