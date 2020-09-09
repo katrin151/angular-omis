@@ -12,6 +12,9 @@ export class CatService {
 
     {breed:"La Crance", firstname: "Kiisu", 
     picture: "https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2020-07/cat-410261.jpg?h=191a1c11&itok=c4ksCwxz"},
+  
+    {breed:"schottish", firstname: "miisu", 
+    picture: "assets/1.jpg"},
   ];
   
 
@@ -23,7 +26,7 @@ export class CatService {
     return this.cats.slice();
   }
 
-  addCat(cat: Cat) {
+  addCat(cat: Cat): void {
     this.cats.push(cat);
   }
 }

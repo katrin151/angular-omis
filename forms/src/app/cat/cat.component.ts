@@ -41,8 +41,8 @@ export class CatComponent implements OnInit {
     this.cats = this.catService.getCats();
     console.log(this.cats);
   }
-  onChooseCat(cat: Cat) {
-    this.catSelectService.addCat(cat);
+  onChooseCat(selectedCat: Cat): void {
+    this.catSelectService.addCat(selectedCat);
   }
   
 }
