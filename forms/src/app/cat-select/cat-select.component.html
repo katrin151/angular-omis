@@ -1,11 +1,14 @@
 
 <div routerLink="/"> tagasi Pealehele <br></div>
 <div><button (click)="onDelete()" >Tühjenda ostukorv</button> <br><br><br></div>
-<div *ngFor=" let cat of selectedCats; let i=index" [routerLink]="['cat',i]"> 
+
+<div *ngIf="selectedCats.length==0">Ühtegi kassi ei ole valitud</div>
+
+<div *ngFor=" let cat of selectedCats"> 
+
       {{ cat.breed }} <br>
       {{ cat.firstname }} <br>
       <img src="{{ cat.picture }}" > <br>
       <br><br>
       <button (click)=onDeleteOne(i)>Eemalda ese ostukorvist</button>
 </div>
-<div *ngIf="selectedCats.length == 0 ">Ostukorv on tühi</div>

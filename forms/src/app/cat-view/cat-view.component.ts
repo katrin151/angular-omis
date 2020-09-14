@@ -15,7 +15,7 @@ export class CatViewComponent implements OnInit {
 
   //cat: Cat =   { breed: "", firstname: "",  picture : ""};
   
-  cat: Cat = new Cat("","",""); 
+  cat: Cat; 
   i: number;
 
   constructor(private route: ActivatedRoute, private catService: CatService) { }
@@ -23,9 +23,6 @@ export class CatViewComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.catService.getCats());
     this.cats = this.catService.getCats();
-    //params: {id:"0"}
-    // id   app-routingu seess :id
-    // "0"  väärtus mistuleb url-i
     this.route.params.subscribe( params =>
       this.i = params['id']
 

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule , ReactiveFormsModule}   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +13,7 @@ import { MultiplicationPipe } from './numbers/multiplication.pipe';
 import { ReversePipe } from './reverse.pipe';
 import { CapitaliseFirstPipe } from './capitalise-first.pipe';
 import { CatSelectComponent } from './cat-select/cat-select.component';
+import { CatEditComponent } from './cat-edit/cat-edit.component';
 
 
 @NgModule({
@@ -26,12 +27,14 @@ import { CatSelectComponent } from './cat-select/cat-select.component';
     MultiplicationPipe,
     ReversePipe,
     CapitaliseFirstPipe,
-    CatSelectComponent
+    CatSelectComponent,
+    CatEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
