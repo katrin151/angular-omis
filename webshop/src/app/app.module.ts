@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +22,16 @@ import { FilterUniquePipe } from './item/item-list/filter-unique.pipe';
 import { ToastService, AngularToastifyModule } from 'angular-toastify';
 import { ItemEditComponent } from './item/item-edit/item-edit.component';
 import { ItemAdminAllComponent } from './item/item-admin-all/item-admin-all.component';
+
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+
+// ...
+export function createHttpLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+
 
 @NgModule({
   declarations: [
@@ -50,6 +60,15 @@ import { ItemAdminAllComponent } from './item/item-admin-all/item-admin-all.comp
     BrowserAnimationsModule,
     MatSelectModule,
     AngularToastifyModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+          useFactory: createHttpLoader, // exported factory function needed for AoT compilation
+          deps: [HttpClient]
+      }
+    })
 
   ],
   providers: [ToastService],

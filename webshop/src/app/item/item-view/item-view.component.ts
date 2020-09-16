@@ -30,7 +30,8 @@ export class ItemViewComponent implements OnInit {
       //this.item["itemId"]
       //this.item.itemId;
       let id = params["itemId"];
-      this.item = this.itemService.items[id];
+      //this.item = this.itemService.items[id];
+      this.item = this.itemService.getItem(id);
 
     }); 
     

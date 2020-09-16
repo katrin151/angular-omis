@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {formatDate } from '@angular/common';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -14,13 +15,19 @@ export class HeaderComponent implements OnInit {
       'dd-MM-yyyy hh:mm:ss a', 'en-US', '+0530');
    }*/
 
+  constructor(private translate: TranslateService) {
+    setInterval(() => {this.today2 = Date.now()}, 1000);
+  }
+
   ngOnInit(): void {
+  }
+
+  useLanguage(language: string) {
+    this.translate.use(language);
   }
 
   today2: number = Date.now();
 
-constructor() {
-    setInterval(() => {this.today2 = Date.now()}, 1000);
-}
+
 
 }
