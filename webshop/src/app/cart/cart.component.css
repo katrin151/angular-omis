@@ -1,6 +1,6 @@
 .cart-page {
    width: 90%;
-   background-color: #0eff00;
+   background-color: #64c47c;
    margin: 0 auto;
    padding: 15px;
 
@@ -9,7 +9,7 @@
 .cart-item {
     display: flex;
     padding: 20px 0;
-    border-bottom: 4px solid greenyellow
+    border-bottom: 4px solid #000000
 }
 
 .cell {
@@ -20,7 +20,6 @@
 }
 
 .total-sum {
-
     font-size:30px;
     margin: 20px 35%;
     padding-bottom: 3px;

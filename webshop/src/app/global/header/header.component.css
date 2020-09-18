@@ -1,5 +1,6 @@
 .header {
-    background-color: rgb(82, 135, 168);
+    /*background-color: rgb(82, 135, 168);*/
+    background-color:#5287a8;
     display: flex;
     justify-content: space-between;
 }
