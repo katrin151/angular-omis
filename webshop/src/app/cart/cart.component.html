@@ -3,7 +3,7 @@
 
     <div  class="cart-item" *ngFor="let item of cartItems; let i = index">
         <img  class="cart-item-picture" src="{{item.imgSrc}}" > 
-        <p class="cell">  {{item.title}} </p>
+        <p class="cell">{{"  "}} {{item.title}} </p>
         <p class="cell"> {{item.price}} € </p>
         <!-- <button class= "delete-button" (click)="onDeleteOne(i)">Kustuta ostukorvist</button> -->
         <img class="delete-button" (click)="onDeleteOne(i)" src="assets\trashbin.png" >
