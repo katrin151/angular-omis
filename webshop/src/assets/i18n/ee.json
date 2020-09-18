@@ -1,7 +1,26 @@
 {
     "Lisa uus ese" : "Lisa uus ese",
-    "Vali kategooria" : "vali kategooria"
-
-
-
+    "Vali kategooria" : "vali kategooria",
+    "Logi sisse / Registreeru" : "Logi sisse / Registreeru",
+    "Ostukorv" : "Ostukorv",
+    "Muuda" : "Muuda" ,
+    "Muuda andmeid" :"Muuda andmeid" ,
+    "Esemeid ostukorvis ei ole" : "Esemeid ostukorvis ei ole",
+    "Vaata kõiki esemeid" : "Vaata kõiki esemeid" ,
+    "Tühjenda ostukorv" : "Tühjenda ostukorv",
+    "Lehte ei leitud" : "Lehte ei leitud",
+    "SUMMA KOKKU:" : "SUMMA KOKKU:",
+    "Pildi aadress" : "Pildi aadress",
+    "Nimetus" : "Nimetus",
+    "Hind":"Hind", 
+    "Kategooria" : "Kategooria",
+    "eseme pilt" : "eseme pilt",
+    "nimetus" : "nimetus",
+    "hind":"hind", 
+    "kategooria" : "kategooria",
+    "Lisa ostukorvi" : "Lisa ostukorvi",
+    "Salvesta" : "Salvesta",
+    "Ese edukalt lisatud" : "Ese edukalt lisatud" ,
+    "Edukalt ostukorvi lisatud" : "Edukalt ostukorvi lisatud"
+        
 }

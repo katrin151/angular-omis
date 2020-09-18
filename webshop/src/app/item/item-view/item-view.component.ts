@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CartService } from '../../cart/cart.service'
 import { ToastService } from 'angular-toastify';
 import { Item } from '../item.model';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -18,7 +19,8 @@ export class ItemViewComponent implements OnInit {
     private itemService: ItemService,
     private route: ActivatedRoute, 
     private cartService: CartService,
-    private _toastService: ToastService
+    private _toastService: ToastService,
+    private translate: TranslateService
     )  { }
 
   ngOnInit(): void {
@@ -41,7 +43,9 @@ export class ItemViewComponent implements OnInit {
    onAddtoCart():void {
      console.log("abc");
      this.cartService.addItem(this.item);
-     this._toastService.success('Edukalt ostukorvi lisatud');
+     let teade2 = this.translate.instant('Edukalt ostukorvi lisatud');
+     this._toastService.success(teade2);
+     //this._toastService.success('Edukalt ostukorvi lisatud');
    }
 
 }

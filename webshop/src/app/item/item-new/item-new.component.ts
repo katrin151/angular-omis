@@ -3,6 +3,7 @@ import { Item } from '../item.model';
 import { ItemService } from '../item.service';
 import { NgForm } from '@angular/forms';
 import { ToastService } from 'angular-toastify';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-item-new',
@@ -12,7 +13,8 @@ import { ToastService } from 'angular-toastify';
 export class ItemNewComponent implements OnInit {
 
   constructor(private itemService:ItemService,
-    private toastService: ToastService) {
+    private toastService: ToastService,
+    private translate: TranslateService) {
 
     }
   
@@ -27,7 +29,8 @@ export class ItemNewComponent implements OnInit {
        form.value.category
     );
   this.itemService.addItem(item);
-  this.toastService.success("Ese edukalt lisatud");
+  let teade = this.translate.instant("Ese edukalt lisatud") ; 
+  this.toastService.success (teade) ; // | this.translate}};
   }
 
 }

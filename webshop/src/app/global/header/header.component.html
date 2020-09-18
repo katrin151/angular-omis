@@ -1,10 +1,10 @@
 <div class="header">
     <img src="assets\logo2.png" routerLink="/">
     <button routerLink="/item/new">{{'Lisa uus ese' | translate }}</button>
-    <button routerLink="/item/all">{{'Vaata kõiki esemeid'}}</button>
+    <button routerLink="/item/all">{{'Vaata kõiki esemeid' | translate }}</button>
     <div>
-        <div class="header-link" routerLink="login">Logi sisse / Registreeru</div>
-        <div class="header-link" routerLink="cart">Ostukorv</div>
+        <div class="header-link" routerLink="login">{{"Logi sisse / Registreeru" | translate }} </div>
+        <div class="header-link" routerLink="cart">{{"Ostukorv" | translate}} </div>
         <button (click)="useLanguage('en')">en</button>
         <button (click)="useLanguage('ee')">ee</button>
     </div>

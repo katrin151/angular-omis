@@ -1,8 +1,25 @@
 {
     "Lisa uus ese" : "Add new item",
-    "Vali kategooria" : "Choose category" 
-
-
-
-
+    "Vali kategooria" : "Choose category" ,
+    "Logi sisse / Registreeru" : "Login / Register",
+    "Ostukorv" : "Cart",
+    "Muuda andmeid" : "Change data" ,
+    "Muuda" : "Save changes" ,
+    "Esemeid ostukorvis ei ole" : "No items in cart",
+    "Vaata kõiki esemeid" : "List of all items" ,
+    "Tühjenda ostukorv" : "Empty the cast",
+    "Lehte ei leitud" : "Page not found",
+    "SUMMA KOKKU:" : "TOTAL:",
+    "Pildi aadress" : "Picture location",
+    "Nimetus" : "Name",
+    "Hind":"Price", 
+    "Kategooria" : "Category",
+    "eseme pilt" : "picture",
+    "nimetus" : "name",
+    "hind" : "price", 
+    "kategooria" : "category",
+    "Lisa ostukorvi" : " Add to cart",
+    "Salvesta" : "Save",
+    "Ese edukalt lisatud" : "Item added to list",
+    "Edukalt ostukorvi lisatud" : "Item added to cart"
 }
