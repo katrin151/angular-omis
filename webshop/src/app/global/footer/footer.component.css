@@ -1,8 +1,8 @@
 #footer {
     height: 20px;
-    bottom: 0;
+    bottom: 4px;
     left: 0;
     right: 0;
     position: fixed;
-    background-color: #5287a8;
+    background-color: teal; /*#5287a8;*/
 }

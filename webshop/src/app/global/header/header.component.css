@@ -1,14 +1,18 @@
 .header {
-    /*background-color: rgb(82, 135, 168);*/
-    background-color:#5287a8;
+    /*background-color: rgb(82, 135, 168); #5287a8;*/
+    background-color:seagreen ; 
     display: flex;
     justify-content: space-between;
 }
 
 .header-link{
-    background-color: #58a162;
+    background-color: teal; /* #58a162; */
     margin: 20px;
     cursor: pointer;
+    padding: 5px 30px;
+    font-size: 18px;
+    border-color: lawngreen;
+
 }
 .header img {
     width: 100px;
