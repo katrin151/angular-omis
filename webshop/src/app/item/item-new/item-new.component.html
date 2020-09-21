@@ -1,15 +1,27 @@
-<form (ngSubmit)="onSubmit(form)" #form="ngForm">
-  <label>{{"eseme pilt" | translate}} </label><br>
-  <input ngModel name="imgSrc" type="text"><br>
-  <label>{{"nimetus" | translate }}  </label><br>
-  <input ngModel name="title" type="text"><br>
-  <label>{{"hind" | translate }}</label><br>
-  <input ngModel name="price" type="text"><br>
-  <label>{{"kategooria" | translate }} </label><br>
-  <input ngModel name="category" type="text"><br>
-  <br>
-  <button type="submit">{{"Salvesta" | translate }} </button>
-</form>
+<div class="input-form">
+  <h2>{{"Lisa uus ese" | translate}}</h2>
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <div class="input-form-field">
+      <input type="text" ngModel name="imgSrc" required="">
+      <label>{{"eseme pilt" | translate}}</label>
+    </div>
+    <div class="input-form-field">
+      <input type="text" ngModel name="title" required="">
+      <label>{{"nimetus" | translate }}</label>
+    </div>
+    <div class="input-form-field">
+      <input type="text" ngModel name="price" required="">
+      <label>{{"hind" | translate }}</label>
+    </div>
+    <div class="input-form-field">
+      <input type="text" ngModel name="category" required="">
+      <label>{{"kategooria" | translate }}</label>
+    </div>
+    <button class="main-button" type="submit">{{"Salvesta" | translate }} </button>
+  </form>
+</div>
+
+
 
 <lib-toastify-toast-container 
 [position]="'bottom-right' " 

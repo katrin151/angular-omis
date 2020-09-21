@@ -2,7 +2,7 @@
     <div class="item" *ngFor="let item of items; let i= index" >
         <p> {{item.title}}</p>
         <p>{{item.price}} €</p>
-        <button [routerLink]="['/item/edit',i]">{{"Muuda andmeid" | translate}}</button>          
+        <button class="main-button" [routerLink]="['/item/edit',i]">{{"Muuda andmeid" | translate}}</button>          
     </div>
  
  </div>

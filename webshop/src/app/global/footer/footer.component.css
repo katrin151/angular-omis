@@ -1,9 +1,9 @@
 #footer {
-    height: 20px;
-    bottom: 17px;
+    height: 50px;
+    bottom: 0px;
     left: 0;
     right: 0;
-    position: fixed;
+    position: absolute;
     background-color: teal; /*#58a162; #5287a8;*/
     text-align: right;
 }

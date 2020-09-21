@@ -1,5 +1,5 @@
 <div class="cart-page" *ngIf="cartItems.length > 0">
-    <button (click) = "onDelete()">{{"Tühjenda ostukorv" | translate}}</button>
+    <button class="main-button" (click) = "onDelete()">{{"Tühjenda ostukorv" | translate}}</button>
 
     <div  class="cart-item" *ngFor="let item of cartItems; let i = index">
         <img  class="cart-item-picture" src="{{item.imgSrc}}" > 
