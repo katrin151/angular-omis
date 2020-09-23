@@ -26,6 +26,7 @@ import { ItemAdminAllComponent } from './item/item-admin-all/item-admin-all.comp
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { FilterCategoryPipe } from './item/item-list/filter-category.pipe';
 
 // ...
 export function createHttpLoader(http: HttpClient) {
@@ -51,6 +52,7 @@ export function createHttpLoader(http: HttpClient) {
     FilterUniquePipe,
     ItemEditComponent,
     ItemAdminAllComponent,
+    FilterCategoryPipe,
     
   ],
   imports: [

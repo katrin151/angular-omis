@@ -36,3 +36,9 @@
 .item p { 
     padding: 0 15px;
 }
+
+.selects {
+    display: flex;
+    justify-content: space-evenly;
+
+}
