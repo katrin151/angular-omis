@@ -1,0 +1,11 @@
+<div routerLink="/"> tagasi </div>
+<p>cart works!</p>
+<div class="cart-page">
+    <div class="cart-item" *ngFor="let item of cartItems">
+        <img class="cart-item-picture" src="{{ item.imgSrc}}">
+        <p class="cell"> {{ item.title}} </p>
+        <p class="cell"> {{ item.price}} € </p>
+        <br>
+        <br>
+    </div>
+</div>
