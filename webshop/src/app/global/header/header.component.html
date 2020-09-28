@@ -4,9 +4,16 @@
     <button class="header-link" routerLink="/item/all">{{'Vaata kõiki esemeid' | translate }}</button>
     <div>
         <div class="header-link" routerLink="login">{{"Logi sisse / Registreeru" | translate }} </div>
-        <div class="header-link" routerLink="cart">{{"Ostukorv" | translate}} </div>
-        <button class="header-link" (click)="useLanguage('en')">en</button>
-        <button class="header-link" (click)="useLanguage('ee')">ee</button>
+        <div class="header-link" routerLink="cart">
+            <img src="assets\shopping-cart.svg"> </div>
+        <div id="flags">   
+        <span class="header-link" (click)="useLanguage('en')">
+            <img src="assets\united-kingdom.svg">
+        </span>
+        <span class="header-link" (click)="useLanguage('ee')">
+            <img src="assets\estonia.svg">
+        </span>
+        </div> 
     </div>
 </div>
 <p>{{today2 | date:'fullDate'}} {{today2 | date:'h:mm:ss a'}}</p>
