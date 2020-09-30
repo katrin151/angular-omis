@@ -22,5 +22,7 @@
     "Salvesta" : "Save",
     "Ese edukalt lisatud" : "Item added to list",
     "Edukalt ostukorvi lisatud" : "Item added to cart",
-    "Vali hinnavahemik" : "Choose price range"
+    "Vali hinnavahemik" : "Choose price range",
+    "Edukalt valitud ese ostukorvist kustutatud" : "success",
+    "Edukalt kõik esemed ostukorvist kustutatud" :  "sucess all"
 }

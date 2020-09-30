@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { ToastService } from 'angular-toastify';
 import { CartService } from './cart.service';
 
 @Component({
@@ -10,7 +12,10 @@ export class CartComponent implements OnInit {
   cartItems = [];
   cartSum = 600;
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService,
+    private toastService: ToastService,
+    private translateService: TranslateService)
+     { }
 
   ngOnInit(): void {
     console.log(this.cartItems.toString()+console.log(this.cartItems.toString()+ 
@@ -36,7 +41,7 @@ export class CartComponent implements OnInit {
     
      this.cartItems = this.cartService.getItemsInCart();
      console.log(this.cartItems.toString()+ "sisu kui ma olen uuesti servicelt küsinud")
-    
+    this.toastService.info("Edukalt kõik esemed ostukorvist kustutatud")
    } 
 
    onDeleteOne(i:number): void {
@@ -46,6 +51,7 @@ export class CartComponent implements OnInit {
     this.cartItems.forEach((item)=>{
       this.cartSum = this.cartSum + (Number)(item.price);
     })
+    this.toastService.info(this.translateService.instant("Edukalt valitud ese ostukorvist kustutatud"));
    }
    
 }

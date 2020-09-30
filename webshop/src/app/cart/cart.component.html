@@ -15,4 +15,9 @@
 
 </div>
 
-<div *ngIf="cartItems.length == 0 ">{{"Esemeid ostukorvis ei ole" | translate }} </div>
+<div class="no-items" *ngIf="cartItems.length == 0 ">{{"Esemeid ostukorvis ei ole" | translate }} </div>
+
+<lib-toastify-toast-container 
+[position]="'bottom-right' " 
+[iconLibrary]="'material' " 
+></lib-toastify-toast-container>

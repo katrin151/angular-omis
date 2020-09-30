@@ -8,4 +8,15 @@ export class AppPage {
   getTitleText(): Promise<string> {
     return element(by.css('app-root .content span')).getText() as Promise<string>;
   }
+
+  getButtonText() {
+    return element.all(by.className("header-link")).get(0).get.text();    
+  }
+
+  clickOnLogin() {
+    return element.all(by.css('123')).get(0).click();
+  }
+
+
+
 }

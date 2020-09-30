@@ -23,7 +23,7 @@ export class ItemListComponent implements OnInit {
 
   onAddtoCart(item) {
     
-    this.cartService.addItem(this.item);
+    this.cartService.addItem(item);
     
   }
 }

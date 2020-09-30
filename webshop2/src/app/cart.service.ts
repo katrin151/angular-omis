@@ -5,12 +5,13 @@ import { ItemService } from './item.service';
   providedIn: 'root'
 })
 export class CartService {
-  cartItems = [];i;
+  cartItems = [];
 
   constructor(private itemService: ItemService,) {}
 
   addItem(item: any) :void {
-    console.log(this.cartItems+"addItem");
+    console.log(this.cartItems);
+    console.log("addItem");
    this.cartItems.push(item);
   }
 

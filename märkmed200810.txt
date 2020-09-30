@@ -76,8 +76,14 @@ app.modules.ts
     {{ cat.breed }} <br>
     {{ cat.firstname }} <br>
      <img src="{{ cat.picture }}" > <br>
+
+
+20:43 26.08.2020
   
    
   </div>
 
+20:43 26.08.2020 https://material.angular.io/components/select/overview
 
+https://stackblitz.com/angular/jbmlrxlpvva?file=src%2Fapp%2Fselect-overview-example.ts
+  

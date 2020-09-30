@@ -8,9 +8,14 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
+  it('should display login button', () => {
+    page.clickOnLogin();
+    expect(browser.getCurrentUrl()).toEqual("registreeru/login");
+  });
+
   it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('webshop app is running!');
+    page.clickOnLogin();
+    expect(browser.getCurrentUrl()).toEqual("http://localhost:4200/login");
   });
 
   afterEach(async () => {

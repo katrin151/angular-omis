@@ -1,9 +1,10 @@
 <div class="header">
     <img src="assets\logo2.png" routerLink="/">
-    <button class="header-link" routerLink="/item/new">{{'Lisa uus ese' | translate }}</button>
-    <button class="header-link" routerLink="/item/all">{{'Vaata kõiki esemeid' | translate }}</button>
+    <button *ngIf="loggedIn" class="header-link" routerLink="/item/new">{{'Lisa uus ese' | translate }}</button>
+    <button *ngIf="loggedIn" class="header-link" routerLink="/item/all">{{'Vaata kõiki esemeid' | translate }}</button>
     <div>
-        <div class="header-link" routerLink="login">{{"Logi sisse / Registreeru" | translate }} </div>
+        <div *ngIf="loggedIn" class="header-link" (click)="onLogout()" >{{"Logi välja"  }} </div>
+        <div *ngIf="!loggedIn" class="header-link" routerLink="login">{{"Logi sisse / Registreeru" | translate }} </div>
         <div class="header-link" routerLink="cart">
             <img src="assets\shopping-cart.svg"> </div>
         <div id="flags">   
